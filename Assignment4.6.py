@@ -15,7 +15,7 @@ def computepay(h,r):
         print("Error . please enter numeric input")
         quit()
     if (h > 40):
-        grossPay = h * r + (h - 40) * 0.5 * r;
+        grossPay = h * r + (h - 40) * 1.5 * r;
 
     else:
         grossPay = h * r
