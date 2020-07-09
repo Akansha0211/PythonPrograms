@@ -8,8 +8,21 @@
 
 
 def computepay(h,r):
-    return 42.37
+    try:
+        h = float(hrs)
+        r = float(rate)
+    except:
+        print("Error . please enter numeric input")
+        quit()
+    if (h > 40):
+        grossPay = h * r + (h - 40) * 0.5 * r;
+
+    else:
+        grossPay = h * r
+    return grossPay
 
 hrs = input("Enter Hours:")
+rate = input("Enter Rate:")
+
 p = computepay(10,20)
 print("Pay",p)
