@@ -5,6 +5,7 @@
 
 
 name = input('Enter the file name')
+if len(name) < 1: name = 'mbox-short.txt'
 handle = open(name)
 lst = list()
 dict = dict()
