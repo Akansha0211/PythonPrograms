@@ -20,6 +20,7 @@ for line in handle:
         email = words[1]
         # print(email)
         dict[email] = dict.get(email, 0) + 1
+
         # print(dict)
 # print(dict)
 # max_key = max(dict, key= dict.get)
@@ -37,12 +38,36 @@ for k in dict:
 print(max_key , maximum)
 
 
-
-
-
 # a = {"a":1, "b":2, "c":3}
 # max_key = max(a , key= a.get)
 # print(max_key)
 
+
+
+# name = input('Enter file name')
+# if len(name) < 1 : name = 'mbox-short.txt'
+# handle = open(name)
+# di = dict()
+# for line in handle:
+#     line = line.rstrip()
+#     # print(line)
+#     words = line.split()
+#     # print(words)
+#     for word in words:
+#         if word in di:
+#             di[word] = di[word]+1
+#         else:
+#             di[word] = 1
+#         # print(word, di[word])
+# print(di)
+# # now we want to find the most common word
+# largest = -1  ## since values (v are always number >1)
+# theword = None
+# for k, v in di.items():
+#     # print(k,v)
+#     if v > largest:
+#         largest = v
+#         theword = k
+# print(theword, largest)
 
 
