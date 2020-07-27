@@ -18,7 +18,10 @@ while True:
         continue
 
     # print(fval)
-    if smallest is None:
+
+    # Logic for Smallest and Largest
+
+    if smallest is None:  #  if it is not included  TypeError: '<' not supported between instances of 'float' and 'NoneType'
         smallest = fval
         largest = fval
     if (fval < smallest):

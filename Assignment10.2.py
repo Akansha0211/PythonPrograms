@@ -8,9 +8,8 @@
 
 name = input("Enter file:")
 if len(name) < 1 : name = "mbox-short.txt"
-lst = list()
 handle = open(name)
-lst = list()
+# lst = list()  no use
 di = dict()
 for line in handle:
     if not line.startswith('From'):
@@ -19,14 +18,14 @@ for line in handle:
         continue
     else:
         words = line.rstrip().split()
-        time = words[5]
-        hrs = time.split(':')
+        time = words[5]  # extract whole time eg 19:23:45
+        hrs = time.split(':')   #split by : results in list having string ['19', '23', '45']
         # print(hrs)
-        h = hrs[0]
+        h = hrs[0]  # extract only time in hr
         # print(h)
-        di[h] = di.get(h, 0) + 1
+        di[h] = di.get(h, 0) + 1  #count frequency of time in hr
 # print(di)
-dict1 = sorted(di.items())
+dict1 = sorted(di.items())   # sort the dictionary items based on key (here key is time in hr)
 for k,v in dict1:
     print(k, v)
 

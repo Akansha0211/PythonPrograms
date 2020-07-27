@@ -16,7 +16,7 @@
 # count = 0
 # for line in fh:
 #     line = line.rstrip()
-#     if not line.startswith('From '):
+#     if not line.startswith('From '):  # if line does not start with From then skip
 #         continue
 #     count = count + 1
 #     words = line.rstrip().split()
@@ -31,11 +31,11 @@ fname = input("Enter file name: ")
 fh = open(fname)
 count = 0
 for line in fh:
-    if not line.startswith('From'):
+    if not line.startswith('From'):  # if line does not start with From then skip
         continue
-    if line.startswith('From:'):
+    if line.startswith('From:'):     # if line starts with From: then also skip
         continue
-    else:
+    else:                            # if line starts with From (having space)
         # line = line.rstrip().split()
         # line = line[1]
         # print(line)

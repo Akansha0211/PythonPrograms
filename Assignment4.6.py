@@ -13,8 +13,8 @@ def computepay(h,r):
         r = float(rate)
     except:
         print("Error . please enter numeric input")
-        quit()
-    if (h > 40):
+        quit()   # if we don't use quit it will again give us traceback instead of placing it inside except block
+    if (h > 40):   # once got appropriate value (without traceback error)
         grossPay = h * r + (h - 40) * 1.5 * r;
 
     else:
@@ -24,5 +24,5 @@ def computepay(h,r):
 hrs = input("Enter Hours:")
 rate = input("Enter Rate:")
 
-p = computepay(10,20)
+p = computepay(10,20)  # invoke function
 print("Pay",p)

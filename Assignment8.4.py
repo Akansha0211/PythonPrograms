@@ -17,3 +17,7 @@ for line in fh:
             lst.append(element)
 lst.sort()
 print(lst)
+
+# for line in fh:
+#     line = line.rstrip()
+#     print(line)

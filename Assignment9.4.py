@@ -4,11 +4,11 @@
 # After the dictionary is produced, the program reads through the dictionary using a maximum loop to find the most prolific committer.
 
 
-name = input('Enter the file name')
-if len(name) < 1: name = 'mbox-short.txt'
-handle = open(name)
-lst = list()
-dict = dict()
+name = input('Enter the file name')  # returns string (file name)
+if len(name) < 1: name = 'mbox-short.txt'  # will take mbox-short.txt as file name
+handle = open(name)   # open file in default-mode
+lst = list()          #create list
+dict = dict()          #create dictionary
 for line in handle:
     if not line.startswith('From'):
         continue
@@ -19,7 +19,7 @@ for line in handle:
         # print(words)
         email = words[1]
         # print(email)
-        dict[email] = dict.get(email, 0) + 1
+        dict[email] = dict.get(email, 0) + 1     #count is given to the dictionary as values
 
         # print(dict)
 # print(dict)
